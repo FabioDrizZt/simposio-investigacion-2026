@@ -28,3 +28,4 @@
   - `F`: pantalla completa · `ESC` / `O`: vista general de diapositivas.
 - **En el póster (`/poster/`):**
   - `F`: pantalla completa · `P`: pausar / reanudar el recorrido automático de pasos.
+

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,13 @@
       --ink: #1b2432;
       font-family: "Segoe UI", system-ui, sans-serif;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       background: var(--bg);
       color: var(--ink);
@@ -22,6 +29,7 @@
       display: flex;
       flex-direction: column;
     }
+
     header {
       background: linear-gradient(110deg, var(--navy), var(--navy-2));
       color: #fff;
@@ -33,10 +41,32 @@
       gap: 24px;
       flex-wrap: wrap;
     }
-    header h1 { font-size: 1.55rem; max-width: 880px; line-height: 1.25; }
-    header p { color: #8fdcd8; margin-top: 6px; font-size: 0.98rem; }
-    .logos { display: flex; align-items: center; gap: 14px; }
-    .logos img { height: 60px; background: #fff; padding: 6px 10px; border-radius: 10px; }
+
+    header h1 {
+      font-size: 1.55rem;
+      max-width: 880px;
+      line-height: 1.25;
+    }
+
+    header p {
+      color: #8fdcd8;
+      margin-top: 6px;
+      font-size: 0.98rem;
+    }
+
+    .logos {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logos img {
+      height: 60px;
+      background: #fff;
+      padding: 6px 10px;
+      border-radius: 10px;
+    }
+
     main {
       max-width: 1240px;
       width: 100%;
@@ -46,11 +76,13 @@
       gap: 28px;
       flex: 1;
     }
+
     .hero-cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
       gap: 24px;
     }
+
     .card {
       background: #fff;
       border-radius: 14px;
@@ -62,10 +94,29 @@
       justify-content: space-between;
       gap: 16px;
     }
-    .card.orange { border-top-color: var(--orange); }
-    .card h2 { color: var(--navy); font-size: 1.35rem; }
-    .card p { color: #475569; line-height: 1.45; font-size: 0.98rem; }
-    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 6px; }
+
+    .card.orange {
+      border-top-color: var(--orange);
+    }
+
+    .card h2 {
+      color: var(--navy);
+      font-size: 1.35rem;
+    }
+
+    .card p {
+      color: #475569;
+      line-height: 1.45;
+      font-size: 0.98rem;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+
     .btn {
       display: inline-flex;
       align-items: center;
@@ -79,9 +130,20 @@
       color: #fff;
       transition: translate 0.2s ease, opacity 0.2s ease;
     }
-    .btn.teal { background: var(--teal); }
-    .btn.ghost { background: #e2e8f0; color: var(--navy); }
-    .btn:hover { translate: 0 -2px; }
+
+    .btn.teal {
+      background: var(--teal);
+    }
+
+    .btn.ghost {
+      background: #e2e8f0;
+      color: var(--navy);
+    }
+
+    .btn:hover {
+      translate: 0 -2px;
+    }
+
     .demos {
       background: #fff;
       border-radius: 14px;
@@ -89,12 +151,19 @@
       border-top: 7px solid var(--navy);
       box-shadow: 0 8px 24px rgb(20 40 75 / 0.08);
     }
-    .demos h3 { color: var(--navy); margin-bottom: 14px; font-size: 1.15rem; }
+
+    .demos h3 {
+      color: var(--navy);
+      margin-bottom: 14px;
+      font-size: 1.15rem;
+    }
+
     .demo-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 12px;
     }
+
     .demo-grid a {
       text-decoration: none;
       color: var(--navy);
@@ -104,7 +173,11 @@
       font-weight: 600;
       font-size: 0.94rem;
     }
-    .demo-grid a:hover { background: #e3f4f3; }
+
+    .demo-grid a:hover {
+      background: #e3f4f3;
+    }
+
     footer {
       text-align: center;
       padding: 18px;
@@ -113,10 +186,12 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <div>
-      <h1>Agentes de IA y Protocolo MCP para evaluación continua y autoevaluación en materias de Ingeniería en Informática</h1>
+      <h1>Agentes de IA y Protocolo MCP para evaluación continua y autoevaluación en materias de Ingeniería en
+        Informática</h1>
       <p>Ing. Fabio Argañaraz · VIII Simposio de Investigación · Mesa Jóvenes Investigadores en Acción (29/10/2026)</p>
     </div>
     <div class="logos">
@@ -131,7 +206,9 @@
       <article class="card">
         <div>
           <h2>🖼️ Póster Digital (16:9 · 1920 × 1080)</h2>
-          <p>Lámina única horizontal siguiendo el diseño de ejemplo de la circular: Problema, Objetivos, Cómo funciona (con las 5 cátedras de UCSE y UNJu), Estado de avance (Resultados preliminares), Próximos pasos y código QR.</p>
+          <p>Lámina única horizontal siguiendo el diseño de ejemplo de la circular: Problema, Objetivos, Cómo funciona
+            (con las 5 cátedras de UCSE y UNJu), Estado de avance (Resultados preliminares), Próximos pasos y código QR.
+          </p>
         </div>
         <div class="actions">
           <a class="btn teal" href="poster/index.html">Abrir Póster Web</a>
@@ -142,7 +219,10 @@
       <article class="card orange">
         <div>
           <h2>🎤 Presentación Pitch (Reveal.js · 3 min)</h2>
-          <p>Presentación estructurada según la circular (Problema, Qué hacemos, Qué mostramos, Qué sigue + Demo y diapositivas verticales de respaldo). Incluye notas de orador (tecla <b>S</b>) y cronómetro de 3:00 (tecla <b>T</b>).</p>
+          <p>Presentación estructurada según la circular (Problema, Qué hacemos, Qué mostramos, Qué sigue + Demo y
+            diapositivas verticales de respaldo). Incluye notas de orador (tecla <b>S</b>) y cronómetro de 3:00 (tecla
+            <b>T</b>).
+          </p>
         </div>
         <div class="actions">
           <a class="btn" href="presentacion/index.html">Abrir Presentación Reveal.js</a>
@@ -158,8 +238,10 @@
         <a href="widgets/02_zero_shot_vs_sdd.html" target="_blank">📐 Widget 2 · Zero-shot vs. SDD</a>
         <a href="widgets/03_ritmo_dashboard.html" target="_blank">📈 Widget 3 · Dashboard Puntos de Ritmo</a>
         <a href="widgets/04_skill_builder.html" target="_blank">🧩 Widget 4 · Anatomía de una Skill Docente</a>
-        <a href="https://sites.google.com/fi.unju.edu.ar/integracion-de-agentes-de-ia/" target="_blank" rel="noopener">🌐 Portal Web del Proyecto</a>
-        <a href="https://github.com/Taller-de-Agentes-de-IA-en-docencia/plantilla-taller-docente-mcp" target="_blank" rel="noopener">💻 Repositorio Plantilla (GitHub)</a>
+        <a href="https://sites.google.com/fi.unju.edu.ar/integracion-de-agentes-de-ia/" target="_blank"
+          rel="noopener">🌐 Portal Web del Proyecto</a>
+        <a href="https://github.com/Taller-de-Agentes-de-IA-en-docencia/plantilla-taller-docente-mcp" target="_blank"
+          rel="noopener">💻 Repositorio Plantilla (GitHub)</a>
       </div>
     </section>
   </main>
@@ -168,5 +250,5 @@
     Iniciación a la Investigación 2025-2026 · GIyT, UCSE-DASS · Contacto: fabiodamian.arganarazazua@ucse.edu.ar
   </footer>
 </body>
-</html>
 
+</html>
