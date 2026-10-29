@@ -459,13 +459,13 @@ void calcularPromedio(int notas[], int n, float prom) {
               </ul>
             </header>
             <div class="kpis">
-              <div class="kpi"><b>&gt;65%</b>
-                <p>de los estudiantes con <strong>ritmo de entrega positivo</strong> (inicio temprano)</p><i
-                  class="kpi-meter" style="--w:68%"></i>
+              <div class="kpi"><b>91,7%</b>
+                <p>sostuvo <strong>ritmo de entrega positivo</strong> (&gt;50 pts · 22/24 alumnos; <strong>66,7%</strong> en promoción ≥80 pts)</p><i
+                  class="kpi-meter" style="--w:92%"></i>
               </div>
-              <div class="kpi"><b>3–5</b>
-                <p>ciclos de <strong>autocorrección</strong> (<code>push → feedback → fix</code>) por entrega</p><i
-                  class="kpi-meter" style="--w:82%"></i>
+              <div class="kpi"><b>23 <small>TPs</small></b>
+                <p>micro-entregas en el 1.er semestre (M1+M2) con <strong>3–5 ciclos</strong> de autocorrección y media de <strong>80 pts</strong></p><i
+                  class="kpi-meter" style="--w:85%"></i>
               </div>
               <div class="kpi"><b>≈0</b>
                 <p>entregas con <strong>errores fatales de compilación</strong> gracias al autograding</p><i
@@ -484,14 +484,79 @@ void calcularPromedio(int notas[], int n, float prom) {
                   class="kpi-meter" style="--w:100%"></i>
               </div>
             </div>
-            <p class="foot-note">Datos agregados y anonimizados (Programación II, 1.er semestre 2026 y taller docente).
-              Análisis inferencial en curso. ↓ lecciones aprendidas</p>
+            <p class="foot-note">Datos agregados y anonimizados (Programación II, 1.er semestre 2026: N = 24, 23 entregas y taller docente).
+              ↓ desglose de Puntos de Ritmo y lecciones aprendidas</p>
           </div>
           <aside class="notes">
-            (25 s) ¿Qué logramos hasta ahora? Más del 65 % de los estudiantes de Programación II arrancó temprano sus
-            trabajos; cada uno hizo entre tres y cinco ciclos de autocorrección antes de entregar; y prácticamente
-            desaparecieron las entregas que no compilaban. Además transferimos todo: 35 simuladores web y un taller de
-            diez horas al que asistieron 70 docentes de la UCSE y la UNJu.
+            (25 s) ¿Qué logramos en el primer semestre? El 91,7 % de los estudiantes de Programación II —22 de 24— sostuvo un ritmo de entrega positivo por encima de los 50 puntos a lo largo de 23 micro-entregas, con un promedio de 80 puntos y dos tercios del curso en rango de promoción. Además, en el cierre del segundo módulo el 100 % entregó en forma anticipada. Prácticamente desaparecieron las entregas que no compilaban y transferimos 35 simuladores web y un taller de diez horas a 70 docentes de UCSE y UNJu.
+          </aside>
+        </section>
+
+        <section>
+          <div class="slide">
+            <header class="s-head"><span class="kicker">Respaldo · Telemetría 1.er Semestre (M1 + M2)</span>
+              <h2>Puntos de Ritmo en <mark>Programación II</mark> <small>(N = 24 · 23 entregas · anonimizado)</small></h2>
+            </header>
+            <div class="ritmo-wrap">
+              <div class="ritmo-summary">
+                <article class="r-tier r-tier--promo">
+                  <div class="r-head"><b>66,7%</b><span>16 / 24 alumnos</span></div>
+                  <h3>Promoción por Ritmo (≥ 80 pts)</h3>
+                  <p>6 estudiantes superaron los 100 pts (hasta <b>110 pts</b>) sumando bonos de entrega temprana (<code>+2</code>) y talleres (<code>T1/T2</code>).</p>
+                </article>
+                <article class="r-tier r-tier--reg">
+                  <div class="r-head"><b>25,0%</b><span>6 / 24 alumnos</span></div>
+                  <h3>Regularidad Sostenida (50–79 pts)</h3>
+                  <p>Recuperaron penalizaciones iniciales mediante el protocolo de re-entrega con defensa en video y <em>merge</em> de correcciones.</p>
+                </article>
+                <article class="r-tier r-tier--low">
+                  <div class="r-head"><b>8,3%</b><span>2 / 24 alumnos</span></div>
+                  <h3>Alerta Temprana (&lt; 50 pts)</h3>
+                  <p>Detección automática de déficit de ritmo para activar tutoría pedagógica oportuna antes del cierre anual.</p>
+                </article>
+              </div>
+              <div class="ritmo-chart" aria-label="Distribución anonimizada de Puntos de Ritmo de los 24 estudiantes">
+                <div class="rc-top">
+                  <span>Distribución individual anonimizada (<code>EST_01</code> a <code>EST_24</code>) · Media: <b>80,0 pts</b> · Mediana: <b>85,5 pts</b></span>
+                  <span class="rc-badge">Cierre M2 (últimas 3 entregas): <b>100% entregas anticipadas (+2 pts)</b></span>
+                </div>
+                <div class="rc-bars">
+                  <div class="rc-bar promo" style="--h:100%"><span>110</span></div>
+                  <div class="rc-bar promo" style="--h:95%"><span>105</span></div>
+                  <div class="rc-bar promo" style="--h:94%"><span>103</span></div>
+                  <div class="rc-bar promo" style="--h:94%"><span>103</span></div>
+                  <div class="rc-bar promo" style="--h:93%"><span>102</span></div>
+                  <div class="rc-bar promo" style="--h:92%"><span>101</span></div>
+                  <div class="rc-bar promo" style="--h:90%"><span>99</span></div>
+                  <div class="rc-bar promo" style="--h:88%"><span>97</span></div>
+                  <div class="rc-bar promo" style="--h:83%"><span>91</span></div>
+                  <div class="rc-bar promo" style="--h:81%"><span>89</span></div>
+                  <div class="rc-bar promo" style="--h:80%"><span>88</span></div>
+                  <div class="rc-bar promo" style="--h:78%"><span>86</span></div>
+                  <div class="rc-bar promo" style="--h:77%"><span>85</span></div>
+                  <div class="rc-bar promo" style="--h:76%"><span>84</span></div>
+                  <div class="rc-bar promo" style="--h:75%"><span>83</span></div>
+                  <div class="rc-bar promo" style="--h:73%"><span>80</span></div>
+                  <div class="rc-bar reg" style="--h:57%"><span>63</span></div>
+                  <div class="rc-bar reg" style="--h:55%"><span>61</span></div>
+                  <div class="rc-bar reg" style="--h:55%"><span>60</span></div>
+                  <div class="rc-bar reg" style="--h:53%"><span>58</span></div>
+                  <div class="rc-bar reg" style="--h:50%"><span>55</span></div>
+                  <div class="rc-bar reg" style="--h:49%"><span>54</span></div>
+                  <div class="rc-bar alert" style="--h:38%"><span>42</span></div>
+                  <div class="rc-bar alert" style="--h:20%"><span>22</span></div>
+                </div>
+                <div class="rc-legend">
+                  <span><i class="dot-promo"></i> Promoción ≥80 pts (16)</span>
+                  <span><i class="dot-reg"></i> Regular 50–79 pts (6)</span>
+                  <span><i class="dot-alert"></i> Alerta &lt;50 pts (2)</span>
+                  <span>Umbral de regularidad: <b>50 pts</b> · Base inicial: <b>100 pts</b> (+5 T1, +5 T2, +2 entrega temprana, -5/-10 mora)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <aside class="notes">
+            Desglose anonimizado de los 24 estudiantes del primer semestre en Programación II a lo largo de las 23 entregas de los módulos 1 y 2. 22 de 24 estudiantes (91,7 %) sostuvieron la regularidad por encima de los 50 puntos, y 16 de 24 (66,7 %) se ubicaron en rango de promoción (80 puntos o más). En las últimas tres entregas del Módulo 2 (junio), los 24 estudiantes entregaron de forma anticipada (+2 puntos).
           </aside>
         </section>
 

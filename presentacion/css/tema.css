@@ -1100,6 +1100,174 @@ table.sec td {
   background: linear-gradient(90deg, var(--teal), var(--orange));
 }
 
+/* ---------- 8.2 · Desglose Puntos de Ritmo ---------- */
+.ritmo-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.ritmo-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.r-tier {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  box-shadow: 0 6px 18px rgb(20 40 75 / 0.08);
+  border-top: 7px solid var(--teal);
+  display: grid;
+  gap: 6px;
+}
+
+.r-tier--promo {
+  border-top-color: #10b981;
+}
+
+.r-tier--reg {
+  border-top-color: var(--teal);
+}
+
+.r-tier--low {
+  border-top-color: #ef4444;
+}
+
+.r-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.r-head b {
+  font-size: 2.3rem;
+  font-weight: 900;
+  color: var(--navy);
+  line-height: 1;
+}
+
+.r-tier--promo .r-head b { color: #059669; }
+.r-tier--low .r-head b { color: #dc2626; }
+
+.r-head span {
+  font-size: 0.86rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  color: var(--navy);
+}
+
+.r-tier h3 {
+  font-size: 1.06rem;
+  color: var(--navy);
+}
+
+.r-tier p {
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.35;
+}
+
+.ritmo-chart {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 20px 26px;
+  box-shadow: 0 6px 18px rgb(20 40 75 / 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  flex: 1;
+}
+
+.rc-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #334155;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.rc-badge {
+  background: var(--teal-soft);
+  color: #0e6d69;
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 0.84rem;
+}
+
+.rc-bars {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  gap: 8px;
+  align-items: end;
+  height: 210px;
+  padding-top: 22px;
+  border-bottom: 2px solid #cbd5e1;
+}
+
+.rc-bar {
+  height: var(--h, 70%);
+  border-radius: 6px 6px 0 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transition: scale 0.25s var(--ease-out);
+  transform-origin: bottom center;
+}
+
+.rc-bar:hover {
+  scale: 1.06 1.04;
+}
+
+.rc-bar span {
+  position: absolute;
+  top: -20px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.rc-bar.promo {
+  background: linear-gradient(180deg, #10b981, #059669);
+}
+
+.rc-bar.reg {
+  background: linear-gradient(180deg, #22c1bc, var(--teal));
+}
+
+.rc-bar.alert {
+  background: linear-gradient(180deg, #f87171, #dc2626);
+}
+
+.rc-legend {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+  color: #475569;
+}
+
+.rc-legend i {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 3px;
+  margin-right: 5px;
+  vertical-align: -1px;
+}
+
+.dot-promo { background: #10b981; }
+.dot-reg { background: var(--teal); }
+.dot-alert { background: #dc2626; }
+
 .lessons {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1491,6 +1659,20 @@ table.sec td {
     animation: meterGrow 0.9s var(--ease-out) 0.35s both;
   }
 
+  section.present .ritmo-summary > .r-tier,
+  section.present .ritmo-chart {
+    animation: cardCascade 0.6s var(--ease-out) both;
+  }
+
+  section.present .ritmo-summary > :nth-child(1) { animation-delay: 0.10s; }
+  section.present .ritmo-summary > :nth-child(2) { animation-delay: 0.18s; }
+  section.present .ritmo-summary > :nth-child(3) { animation-delay: 0.26s; }
+  section.present .ritmo-chart { animation-delay: 0.32s; }
+
+  section.present .rc-bar {
+    animation: barRise 0.7s var(--ease-out) 0.38s both;
+  }
+
   /* Micro-animaciones ambientales continuas */
   .orb-1 {
     animation: orbFloat 8s ease-in-out infinite alternate;
@@ -1545,6 +1727,11 @@ body.motion-paused *::after {
 @keyframes meterGrow {
   from { scale: 0 1; }
   to { scale: 1 1; }
+}
+
+@keyframes barRise {
+  from { scale: 1 0; opacity: 0.3; }
+  to { scale: 1 1; opacity: 1; }
 }
 
 @keyframes orbFloat {
